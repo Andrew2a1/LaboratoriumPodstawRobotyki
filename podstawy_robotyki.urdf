@@ -245,4 +245,50 @@
 		<parent link="link6_passive"/>
 		<child link="link6_x_axis"/>
 	</joint>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link name="base0">
+    <visual>
+      <geometry>
+        <cylinder length="0.1" radius="0.35"/>
+      </geometry>
+        <origin rpy="0 0 0" xyz="0 0 0.05"/>
+    </visual>
+</link>
+
+
+<link name="base1">
+    <visual>
+        <geometry>
+            <cylinder length="0.795" radius="0.325"/>
+        </geometry>
+            <origin rpy="0 0 0" xyz="0 0 0.4075"/>
+    </visual>
+</link>
+
+<link name="base2">
+    <visual>
+        <geometry>
+            <cylinder length="0.1" radius="0.35"/>
+        </geometry>
+            <origin rpy="0 0 0" xyz="0 0 0.810"/>
+    </visual>
+</link>
+
+
+
+
 </robot>
