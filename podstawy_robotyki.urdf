@@ -45,22 +45,22 @@
 		<limit effort="30" velocity="2.19" lower="-2.18" upper="0.79" />
 	</joint>
 
-	<link name="link2_passive">
-	<visual>
-			<origin xyz="0.072 0 0" rpy="0 1.5707963267948966 0"/>
-			<material name="blue"/>
-			<geometry>
-				<cylinder length="0.145" radius="0.05"/>
-			</geometry>
-		</visual>
-	</link>
+	<link name="link2_passive"/>
 	<joint name="q2_passive" type="fixed">
 		<origin xyz="0.85 0 0" rpy="0 0 0"/>
 		<parent link="link2"/>
 		<child link="link2_passive"/>
 	</joint>
 
-	<link name="link3"/>
+	<link name="link3">
+		<visual>
+			<origin xyz="0.072 0 0" rpy="0 1.5707963267948966 0"/>
+			<material name="blue"/>
+			<geometry>
+				<cylinder length="0.2" radius="0.05"/>
+			</geometry>
+		</visual>
+	</link>
 	<joint name="q3" type="revolute">
 		<origin xyz="0 0 0" rpy="0 0 0"/>
 		<parent link="link2_passive"/>
