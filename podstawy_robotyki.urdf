@@ -11,11 +11,11 @@
 			<origin xyz="0 0.0 0.3" rpy="0.0 0.0 0.0"/>
 		</visual>
 	</link>
+
 	<link name="link1">
-
-	<origin xyz="0.175 0 0.1" rpy="0 1.5707963267948966 0"/>
-
+		<origin xyz="0.175 0 0.1" rpy="0 1.5707963267948966 0"/>
 	</link>
+
 	<joint name="q1" type="revolute">
 		<origin xyz="0 0 0.815" rpy="0 0 0"/>
 		<parent link="base_link"/>
@@ -24,12 +24,10 @@
 		<limit effort="30" velocity="2.44" lower="-3.22" upper="3.22" />
 	</joint>
 
-
-
-<!-- To pod katem 45 -->>
+	<!-- To pod katem 45 -->
 	<link name="link1_passive">
-			<visual>
-			<material name="ladny">
+		<visual>
+			<material name="white">
 				<color rgba="1 1 .8 1"/>
 			</material>
 			<geometry>
@@ -40,35 +38,32 @@
 	</link>
 
 
-
 	<joint name="q1_passive" type="fixed">
 		<origin xyz="0.35 0 0" rpy="1.5707963267948966 0 0"/>
 		<parent link="link1"/>
 		<child link="link1_passive"/>
 	</joint>
 	
-
 	<!-- Odwrocony cylinder-->
 	<link name="link2">
-			<visual>
-				<material name="green">
+		<visual>
+			<material name="green">
 				<color rgba="0 0.8 0 1"/>
 			</material>
 			<geometry>
 				<cylinder length=".2" radius="0.1"/>
 			</geometry>
 		</visual>
-					<visual>
-				<material name="qq">
+		<visual>
+			<material name="cyan">
 				<color rgba="0 0.8 0.8 1"/>
 			</material>
 			<geometry>
 				<cylinder length="0.8" radius="0.1"/>
 			</geometry>
-			<origin xyz="0.4 0 0" rpy="1.57 1.57 0.0"/>>
+			<origin xyz="0.4 0 0" rpy="1.57 0 1.57"/>>
 		</visual>
 	</link>
-
 
 
 	<joint name="q2" type="revolute">
@@ -79,11 +74,10 @@
 		<limit effort="30" velocity="2.19" lower="-2.18" upper="0.79" />
 	</joint>
 
-
-<!-- Gorna os -->>
+	<!-- Gorna os -->>
 	<link name="link2_passive">
-				<visual>
-				<material name="rr">
+		<visual>
+			<material name="yellow">
 				<color rgba="0.8 0.8 0 1"/>
 			</material>
 			<geometry>
@@ -92,23 +86,13 @@
 		</visual>
 	</link>
 
-
-
-
-
-
 	<joint name="q2_passive" type="fixed">
 		<origin xyz="0.85 0 0" rpy="0 0 0"/>
 		<parent link="link2"/>
 		<child link="link2_passive"/>
 	</joint>
 
-
-
-
-<!-- Male czerwone gowno -->
-	<link name="link3">
-	</link>
+	<link name="link3"/>
 	<joint name="q3" type="revolute">
 		<origin xyz="0 0 0" rpy="0 0 0"/>
 		<parent link="link2_passive"/>
@@ -117,20 +101,16 @@
 		<limit effort="30" velocity="2.44" lower="-1.18" upper="0.52" />
 	</joint>
 
-
-<!--  Dlugie gowno -->
+	<!-- Dlugie ramie -->
 	<link name="link3_passive">
 		<visual>
 			<material name="blue"/>
 			<geometry>
 				<cylinder length="1" radius="0.05"/>
 			</geometry>
-					<origin xyz="0 0 0.33" rpy="0.0 0.0 0.0"/>
+			<origin xyz="0 0 0.33" rpy="0.0 0.0 0.0"/>
 		</visual>
-
 	</link>
-
-
 
 	<joint name="q3_passive" type="fixed">
 		<origin xyz="0.145 0 0" rpy="1.5707963267948966 0 0"/>
@@ -147,7 +127,15 @@
 		<limit effort="30" velocity="4.53" lower="-6.11" upper="6.11" />	
 	</joint>
 
-	<link name="link4_passive"/>
+	<link name="link4_passive">
+		<visual>
+			<origin xyz="0 0 0" rpy="0 0 0"/>
+			<material name="yellow"/>
+			<geometry>
+				<cylinder length="0.11" radius="0.05"/>
+			</geometry>
+		</visual>
+	</link>
 	<joint name="q4_passive" type="fixed">
 		<origin xyz="0 0 0" rpy="-1.5707963267948966 0 0"/>
 		<parent link="link4"/>
