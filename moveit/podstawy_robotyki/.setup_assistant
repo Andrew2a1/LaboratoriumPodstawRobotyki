@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: urdf_tutorial
+    relative_path: urdf/podstawy_robotyki.urdf
+    xacro_args: "--inorder "
+  SRDF:
+    relative_path: config/KUKA_KR_30-3_R2100.srdf
+  CONFIG:
+    author_name: Adam
+    author_email: anderw2a1z@gmail.com
+    generated_timestamp: 1590418132
