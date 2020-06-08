@@ -31,6 +31,7 @@ arm_position_controller:
     - q3
     - q4
     - q5
+    - q6
   gains:
     q1:
       p: 100
@@ -53,6 +54,11 @@ arm_position_controller:
       i: 1
       i_clamp: 1
     q5:
+      p: 100
+      d: 1
+      i: 1
+      i_clamp: 1
+    q6:
       p: 100
       d: 1
       i: 1

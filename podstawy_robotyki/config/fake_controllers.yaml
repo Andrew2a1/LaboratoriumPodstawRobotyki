@@ -6,6 +6,4 @@ controller_list:
       - q3
       - q4
       - q5
-  - name: fake_effector_controller
-    joints:
       - q6
